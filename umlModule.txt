@@ -1,0 +1,21 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Модули" as M {}
+class "Экранная форма" as V {}
+class "Модуль обработки" as O {}
+class "Форма ввода параметров" as Par {}
+class "Сохранение" as S {}
+class "Процесс расчёта" as C{}
+
+M ||--o{ V
+M ||--o{ O
+V ||--|| Par
+O ||--|| S
+O ||--|| C
+
+hide circle
+@enduml

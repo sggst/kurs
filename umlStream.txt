@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Потоки" as P {}
+class "Входящие" as I {}
+class "Выходящие" as OU {}
+class "Управляющие" as U {}
+class "Заказ" as Z {}
+class "Результат расчётов" as PM {}
+class "Алгоритм расчёта" as A {}
+
+P ||--o{ I
+P ||--o{ OU
+P ||--o{ U
+I ||--o{ Z
+OU ||--o{ PM
+U ||--o{ A
+
+hide circle
+@enduml
